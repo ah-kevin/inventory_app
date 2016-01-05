@@ -18,6 +18,21 @@
   <body>
 
     <!-- Configure System.js, our module loader -->
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('app.js')
+            .then(null, console.error.bind(console));
+  </script>
 
+    <div class="ui main text container">
+      <inventory-app></inventory-app>
+    </div>
   </body>
 </html>
